@@ -1,0 +1,27 @@
+{
+  "name": "tritwise",
+  "description": "tritwise operations",
+  "version": "0.0.1",
+  "main": "tritwise.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:/trit-getset.git"
+  },
+  "keywords": [
+    "ternary",
+    "base3",
+    "trits",
+    "math",
+    "trits",
+    "operation"
+  ],
+  "scripts": {
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "balanced-ternary": "*"
+  },
+  "devDependencies": {
+    "tape": "^4.0.0"
+  }
+}
