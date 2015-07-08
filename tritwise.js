@@ -34,13 +34,11 @@ var UNARY_TRUTH_TABLES = {
   RD: -9,   // i00 reverse diode
 };
 
-var TRYTE_SIZE = 5;
-
-function NTI(x) { return unary_tritwise_op(UNARY_TRUTH_TABLES.NTI, x, TRYTE_SIZE); }
-function STI(x) { return unary_tritwise_op(UNARY_TRUTH_TABLES.STI, x, TRYTE_SIZE); }
-function PTI(x) { return unary_tritwise_op(UNARY_TRUTH_TABLES.PTI, x, TRYTE_SIZE); }
-function FD(x)  { return unary_tritwise_op(UNARY_TRUTH_TABLES.FD,  x, TRYTE_SIZE); }
-function RD(x)  { return unary_tritwise_op(UNARY_TRUTH_TABLES.RD,  x, TRYTE_SIZE); }
+function NTI(x) { return unary_tritwise_op(UNARY_TRUTH_TABLES.NTI, x, get_tryte_size()); }
+function STI(x) { return unary_tritwise_op(UNARY_TRUTH_TABLES.STI, x, get_tryte_size()); }
+function PTI(x) { return unary_tritwise_op(UNARY_TRUTH_TABLES.PTI, x, get_tryte_size()); }
+function FD(x)  { return unary_tritwise_op(UNARY_TRUTH_TABLES.FD,  x, get_tryte_size()); }
+function RD(x)  { return unary_tritwise_op(UNARY_TRUTH_TABLES.RD,  x, get_tryte_size()); }
 
 
 // Dyadic preference functions
@@ -79,11 +77,13 @@ var DYADIC_PREFS = {
   BUT: -2,  // pref-0i1
 };
 
-function TOR(a, b)  { return dyadic_pref_op(DYADIC_PREFS.TOR,  a, b, TRYTE_SIZE); }
-function TAND(a, b) { return dyadic_pref_op(DYADIC_PREFS.TAND, a, b, TRYTE_SIZE); }
-function BUT(a, b)  { return dyadic_pref_op(DYADIC_PREFS.BUT,  a, b, TRYTE_SIZE); }
+function TOR(a, b)  { return dyadic_pref_op(DYADIC_PREFS.TOR,  a, b, get_tryte_size()); }
+function TAND(a, b) { return dyadic_pref_op(DYADIC_PREFS.TAND, a, b, get_tryte_size()); }
+function BUT(a, b)  { return dyadic_pref_op(DYADIC_PREFS.BUT,  a, b, get_tryte_size()); }
 
 module.exports = {
+  tryte_size: 5,
+
   NTI: NTI,
   STI: STI,
   PTI: PTI,
@@ -94,3 +94,8 @@ module.exports = {
   TAND: TAND,
   BUT: BUT,
 };
+
+function get_tryte_size() {
+  return module.exports.tryte_size;
+};
+

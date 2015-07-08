@@ -5,6 +5,8 @@ var tritwise = require('./');
 var bts2n = require('balanced-ternary').bts2n;
 var n2bts = require('balanced-ternary').n2bts;
 
+tritwise.tryte_size = 5;
+
 var STI = tritwise.STI;
 var PTI = tritwise.PTI;
 var FD = tritwise.FD;
