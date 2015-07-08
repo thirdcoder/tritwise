@@ -74,12 +74,14 @@ function dyadic_pref_op(pref, input1, input2, input_width) {
 }
 
 var DYADIC_PREFS = {
-  OR: 8,   // pref-10i, maximum
-  AND: -8, // pref-i01, minimum
-  BUT: -2, // pref-0i1
+  TOR: 8,   // pref-10i, maximum
+  TAND: -8, // pref-i01, minimum
+  BUT: -2,  // pref-0i1
 };
 
-function TOR_5(a, b) { return dyadic_pref_op(DYADIC_PREFS.OR, a, b, TRYTE_SIZE); }
+function TOR_5(a, b)  { return dyadic_pref_op(DYADIC_PREFS.TOR,  a, b, TRYTE_SIZE); }
+function TAND_5(a, b) { return dyadic_pref_op(DYADIC_PREFS.TAND, a, b, TRYTE_SIZE); }
+function BUT_5(a, b)  { return dyadic_pref_op(DYADIC_PREFS.BUT,  a, b, TRYTE_SIZE); }
 
 module.exports = {
   NTI_5: NTI_5,
@@ -89,4 +91,6 @@ module.exports = {
   RD_5: RD_5,
 
   TOR_5: TOR_5,
+  TAND_5: TAND_5,
+  BUT_5: BUT_5,
 };
