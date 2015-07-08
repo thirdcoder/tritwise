@@ -36,11 +36,11 @@ var UNARY_TRUTH_TABLES = {
 
 var TRYTE_SIZE = 5;
 
-function NTI_5(x) { return unary_tritwise_op(UNARY_TRUTH_TABLES.NTI, x, TRYTE_SIZE); }
-function STI_5(x) { return unary_tritwise_op(UNARY_TRUTH_TABLES.STI, x, TRYTE_SIZE); }
-function PTI_5(x) { return unary_tritwise_op(UNARY_TRUTH_TABLES.PTI, x, TRYTE_SIZE); }
-function FD_5(x)  { return unary_tritwise_op(UNARY_TRUTH_TABLES.FD,  x, TRYTE_SIZE); }
-function RD_5(x)  { return unary_tritwise_op(UNARY_TRUTH_TABLES.RD,  x, TRYTE_SIZE); }
+function NTI(x) { return unary_tritwise_op(UNARY_TRUTH_TABLES.NTI, x, TRYTE_SIZE); }
+function STI(x) { return unary_tritwise_op(UNARY_TRUTH_TABLES.STI, x, TRYTE_SIZE); }
+function PTI(x) { return unary_tritwise_op(UNARY_TRUTH_TABLES.PTI, x, TRYTE_SIZE); }
+function FD(x)  { return unary_tritwise_op(UNARY_TRUTH_TABLES.FD,  x, TRYTE_SIZE); }
+function RD(x)  { return unary_tritwise_op(UNARY_TRUTH_TABLES.RD,  x, TRYTE_SIZE); }
 
 
 // Dyadic preference functions
@@ -79,18 +79,18 @@ var DYADIC_PREFS = {
   BUT: -2,  // pref-0i1
 };
 
-function TOR_5(a, b)  { return dyadic_pref_op(DYADIC_PREFS.TOR,  a, b, TRYTE_SIZE); }
-function TAND_5(a, b) { return dyadic_pref_op(DYADIC_PREFS.TAND, a, b, TRYTE_SIZE); }
-function BUT_5(a, b)  { return dyadic_pref_op(DYADIC_PREFS.BUT,  a, b, TRYTE_SIZE); }
+function TOR(a, b)  { return dyadic_pref_op(DYADIC_PREFS.TOR,  a, b, TRYTE_SIZE); }
+function TAND(a, b) { return dyadic_pref_op(DYADIC_PREFS.TAND, a, b, TRYTE_SIZE); }
+function BUT(a, b)  { return dyadic_pref_op(DYADIC_PREFS.BUT,  a, b, TRYTE_SIZE); }
 
 module.exports = {
-  NTI_5: NTI_5,
-  STI_5: STI_5,
-  PTI_5: PTI_5,
-  FD_5: FD_5,
-  RD_5: RD_5,
+  NTI: NTI,
+  STI: STI,
+  PTI: PTI,
+  FD: FD,
+  RD: RD,
 
-  TOR_5: TOR_5,
-  TAND_5: TAND_5,
-  BUT_5: BUT_5,
+  TOR: TOR,
+  TAND: TAND,
+  BUT: BUT,
 };
