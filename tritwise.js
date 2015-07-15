@@ -27,6 +27,7 @@ function unary_tritwise_op(tt, input, input_width) {
 }
 
 var UNARY_TRUTH_TABLES = {
+            // i01
   NTI: 5,   // 1ii negative ternary inverter
   STI: 8,   // 10i simple ternary inverter
   PTI: 11,  // 11i positive ternary inverter
