@@ -1,7 +1,7 @@
 {
   "name": "tritwise",
   "description": "tritwise operations",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "tritwise.js",
   "repository": {
     "type": "git",
