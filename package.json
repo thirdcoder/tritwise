@@ -13,6 +13,8 @@
     "trits",
     "math",
     "trits",
+    "unary",
+    "dyadic",
     "operation"
   ],
   "scripts": {
@@ -25,5 +27,5 @@
   "devDependencies": {
     "tape": "^4.0.0"
   },
-  "LICENSE": "MIT"
+  "license": "MIT"
 }
