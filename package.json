@@ -5,7 +5,7 @@
   "main": "tritwise.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:/trit-getset.git"
+    "url": "git@github.com:thirdcoder/tritwise.git"
   },
   "keywords": [
     "ternary",
@@ -19,10 +19,11 @@
     "test": "node test.js"
   },
   "dependencies": {
-    "balanced-ternary": "*",
+    "balanced-ternary": "^1.0.0",
     "pad": "^0.1.0"
   },
   "devDependencies": {
     "tape": "^4.0.0"
-  }
+  },
+  "LICENSE": "MIT"
 }
