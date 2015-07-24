@@ -2,6 +2,11 @@
 
 Tritwise operations
 
+[![Build Status](https://travis-ci.org/thirdcoder/tritwise.svg?branch=master)](https://travis-ci.org/thirdcoder/tritwise)
+[![npm version](https://badge.fury.io/js/tritwise.svg)](https://www.npmjs.com/package/tritwise)
+
+Usage:
+
     var tritwise = require('tritwise');
 
 Operates on each trit (base 3 digit) of the inputs,
