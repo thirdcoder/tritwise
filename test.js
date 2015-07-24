@@ -39,10 +39,14 @@ test('forward diode', function(t) {
 
 test('dyadic ternary or/maximum', function(t) {
   t.equal(TOR(bts2n('101ii'),
-                bts2n('ii01i')),
-                bts2n('1011i'));
+              bts2n('ii01i')),
+              bts2n('1011i'));
 
-  t.end();
+  t.equal(TOR(bts2n('101ii'),
+              bts2n('iiiii')),
+              bts2n('101ii'));
+
+ t.end();
 });
 
 test('dyadic ternary and/minimum', function(t) {
